@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     repoURL: https://grafana.github.io/helm-charts
-    chart: loki
-    targetRevision: 5.41.5  # Replace with latest if needed
+    chart: grafana/loki
+    targetRevision: 6.29.0  # Replace with latest if needed
     helm:
       values: |
         replicas: 1
@@ -21,7 +21,7 @@ spec:
             retention_period: 168h  # 7 days
   destination:
     server: https://kubernetes.default.svc
-    namespace: monitoring
+    namespace: loki
   syncPolicy:
     automated:
       prune: true
