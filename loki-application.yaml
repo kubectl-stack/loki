@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://grafana.github.io/helm-charts
-    chart: grafana/loki
+    chart: loki
     targetRevision: 6.29.0  # Replace with latest if needed
     helm:
       values: |
